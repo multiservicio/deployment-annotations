@@ -9,6 +9,24 @@ This script provides the functionality to create such events.
 
 ## Usage
 
+Secrets such as users and passwords are handled via environment variables for simplicity. 
+
+Required ones are: 
+
+```
+INFLUX_URL = os.environ['INFLUX_URL']
+INFLUX_USER = os.environ['INFLUX_USER']
+INFLUX_PASSWORD = os.environ['INFLUX_PASSWORD']
+INFLUX_DB = os.environ['INFLUX_DB']
+```
+
+You can simply execute it like:
+```
+$ INFLUX_URL=url INFLUX_USER=user INFLUX_PASSWORD=passwd INFLUX_DB=db python annotations.py
+```
+
+There is also help available:
+
 ```
 $ python annotations.py -h
 usage: annotations.py [-h] [--title TITLE] [--description DESCRIPTION]
